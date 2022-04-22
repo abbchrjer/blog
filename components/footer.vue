@@ -83,7 +83,7 @@
 				<!-- </NuxtLink> -->
 				<div class="m-4 md:mr-36">
 					<!-- <Quotes class="w-4 h-4 text-gray-200 my-2" /> -->
-					<p class="">Hope You learned something here. To stay updated follow me on other social media platforms</p>
+					<p class="">Hope You learned something here.</p>
 					<!-- <Quotes class="w-4 h-4 text-gray-200 my-2 transform rotate-180" /> -->
 				</div>
 			</div>

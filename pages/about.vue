@@ -53,7 +53,7 @@
           <nuxt-img :src="post.img" alt="image" loading="lazy" width="" height=""/>
         </div>
         <div class="md:7/12 lg:w-6/12 m-5">
-          <NuxtLink to="/home" href="/home" class="block text-gray-400 mt-8">← Go Back</NuxtLink>
+          <NuxtLink to="/home" href="/home" class="block text-gray-400 mt-8">← To Home</NuxtLink>
           <h1 class="text-5xl font-black mt-2">{{ post.title }}</h1>
         <nuxt-content class=" mt-4 prose max-w-none" :document="post" />
         </div>

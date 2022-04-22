@@ -22,7 +22,7 @@
       <!-- </nav> -->
       <div class="col-start-4 col-span-6 w-full">
         <div>
-          <NuxtLink to="/home" href="/home" class="block text-gray-400 mt-8">← Go Back</NuxtLink>
+          <NuxtLink to="/home" href="/home" class="block text-gray-400 mt-8">← To Posts</NuxtLink>
           <ul v-if="post.tags" class="flex space-x-3 mt-2">
             <li
               class="text-gray-400 font-bold"
@@ -36,7 +36,7 @@
         </div>
 
         <div class="text-sm mt-5 text-gray-400">
-          
+
               <span>{{formatDate(post.updatedAt)}}</span>
           </div>
 

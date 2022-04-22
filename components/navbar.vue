@@ -26,6 +26,33 @@
       </button>
     </div> -->
 
+
+
+    <div class="hidden bg-red-200 lg:block">
+      <div class="lg:flex lg:flex-grow list-none items-center">
+
+        <ul class="flex flex-col lg:flex-row justify-center ml-auto">
+          <li class="nav-item">
+            <a class="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75" href="/home">
+              <i class=" text-sm leading-lg text-white opacity-75" /><span class="ml-2">Home</span>
+            </a>
+            </li>
+            <li class="nav-item">
+            <a class="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75" href="/blogposts">
+              <i class=" text-sm leading-lg text-white opacity-75" /><span class="ml-2">Posts</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75" href="/about">
+              <i class=" text-sm leading-lg text-white opacity-75" /><span class="ml-2">About</span> 
+            </a>
+          </li>
+        </ul>
+      </div>
+      </div>
+
+      
+
     <div class=" flex flex-col justify-center lg:hidden" type="button" v-on:click="toggleNavbar()">
     <div class="relative sm:max-w-xl mx-auto">
         <nav>
@@ -41,35 +68,11 @@
 </div>
 
 
-<div class="hidden lg:block">
-      <div class="lg:flex lg:flex-grow items-center">
-
-        <ul class="flex flex-col lg:flex-row justify-center list-none ml-auto">
-          <li class="nav-item transition-colors duration-300">
-            <a class="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75" href="/home">
-              <i class=" text-sm leading-lg text-white opacity-75" /><span class="ml-2">Home</span>
-            </a>
-            </li>
-            <li class="nav-item transition-colors duration-300">
-            <a class="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75" href="/blogposts">
-              <i class=" text-sm leading-lg text-white opacity-75" /><span class="ml-2">Posts</span>
-            </a>
-          </li>
-          <li class="nav-item transition-colors duration-300">
-            <a class="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75" href="/about">
-              <i class=" text-sm leading-lg text-white opacity-75" /><span class="ml-2">About</span> 
-            </a>
-          </li>
-        </ul>
-      </div>
-      </div>
-
-
-
 
 
 </div>
 </div>
+
   </nav>
 
 <div class=" absolute z-49">

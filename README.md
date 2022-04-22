@@ -4,4 +4,4 @@ borde fungera på alla skärmstorlekar också (förutom liten bug med mellanstor
 
 ### Inspiration
 
-![alt text](/images/inspiration.png)
+![My Inspiration](images/inspiration.png)

@@ -111,7 +111,7 @@
                         Privacy
                     </NuxtLink>
                 </span>
-                <a class="text-gray-100" href="/"> &#169; hello.com </a>
+                <a class="text-gray-100" href="/home"> &#169; hello.com </a>
                 <span class="flex items-center flex-no-shrink">
                     <font-awesome-icon :icon="['fab', 'github']" class="h-6 w-6 text-gray-100 mr-2"/>
                     <span class="mr-1">abbchrjer</span>

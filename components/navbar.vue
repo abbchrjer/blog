@@ -4,7 +4,7 @@
     <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
       <div div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
         <a class="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white" href="/home">
-          Justini Innovation
+          Jernberg Innovation
         </a>
 
         <div class=" flex flex-col justify-center lg:hidden" type="button" v-on:click="toggleNavbar()">

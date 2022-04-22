@@ -30,7 +30,6 @@
 
     <div class="hidden bg-red-200 lg:block">
       <div class="lg:flex lg:flex-grow list-none items-center">
-
         <ul class="flex flex-col lg:flex-row justify-center ml-auto">
           <li class="nav-item">
             <a class="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75" href="/home">
@@ -51,7 +50,7 @@
       </div>
       </div>
 
-      
+
 
     <div class=" flex flex-col justify-center lg:hidden" type="button" v-on:click="toggleNavbar()">
     <div class="relative sm:max-w-xl mx-auto">

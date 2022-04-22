@@ -36,7 +36,7 @@
         </div>
 
         <div class="text-sm mt-5 text-gray-400">
-              <!-- the format date function converts the default date to a readable form -->
+          
               <span>{{formatDate(post.updatedAt)}}</span>
           </div>
 
@@ -54,24 +54,17 @@ export default {
   async asyncData({ $content, params }) {
     const post = await $content('articles', params.slug).fetch()
 
-    // assign the first two objects in returned array to prev & next constant variables
     const [prev, next] = await $content('articles')
-      // fetch only the title and slug from the articles
       .only(['title', 'slug', 'updatedAt'])
-      // sortby time updated, in ascending order
       .sortBy('updatedAt', 'asc')
-      // get the correct slug
       .surround(params.slug)
-      // fetch data
       .fetch()
 
-    // return the data to be vailable for use in the file
     return { prev, next, post }
 
   },
 
       methods: {
-        // format the date to be displayed in a readable format
         formatDate(date){
             return new Date(date).toLocaleDateString('en', {year: 'numeric', month: 'long', day: 'numeric'})
         }
@@ -82,7 +75,6 @@ export default {
     return {
       title: this.post.title,
       meta: [
-        // Open Graph
         { hid: 'og:title', property: 'og:title', content: this.post.title },
         { hid: 'og:type', property: 'og:type', content: 'article' },
         {
@@ -90,7 +82,6 @@ export default {
           property: 'og:image',
           content: `http://localhost:3000/${this.post.image}`,
         },
-        // Twitter Card
         {
           hid: 'twitter:title',
           name: 'twitter:title',

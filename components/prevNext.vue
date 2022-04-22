@@ -1,6 +1,5 @@
 <template>
   <section id="prev-next" class="flex gap-12 py-8 items-center justify-between m-auto max-w-xl lg: max-w-4xl">
-    <!-- if prev data is available display the link -->
     <nuxt-link
       v-if="prev"
       :to="{ name: 'posts-slug', params: { slug: prev.slug } }"
@@ -20,10 +19,9 @@
       ></span>
       <span> {{ prev.title }} </span>
     </nuxt-link>
-    <!-- else display empty span for styling purposes -->
+
     <span class="prev" v-else></span>
 
-    <!-- if prev data is available display the link -->
     <nuxt-link
       v-if="next"
       :to="{ name: 'posts-slug', params: { slug: next.slug } }"
@@ -45,14 +43,12 @@
         </svg>
       </span>
     </nuxt-link>
-    <!-- else display empty span for styling purposes -->
     <span class="next" v-else> </span>
   </section>
 </template>
 
 <script>
   export default {
-    // create props for prev and next data that will be passed to the component
     props: {
       prev: {
         type: Object,
@@ -65,14 +61,3 @@
     },
   }
 </script>
-
-<style scoped>
-
-    /* .prev-next {
-      flex gap-12 py-8 items-center justify-between m-auto max-w-xl lg: max-w-4xl;
-    } */
-
-    /* .prev-next a {
-        flex gap-2;
-    } */
-</style>

@@ -44,16 +44,6 @@
       </div>
 
 
-
-
-
-      
-
-
-
-
-
-
     </div>
   </div>
 
@@ -63,7 +53,6 @@
     <div v-else class="max-w-screen-lg mx-auto px-4 lg:px-0 mb-12">There are no posts left. Have you tried adding a category?<div class="flex h-screen"></div></div>
 
 
-    <!-- <div class='flex items-center justify-center min-h-screen bg-gray-100'> -->
     <div class="flex flex-col items-center mb-8 px-4 mx-auto mt-8">
         <div class="font-sans flex justify-end space-x-1 select-none">
             <a href="#" class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md" style="transition: all 0.2s ease;">
@@ -97,7 +86,7 @@
 </template>
 
 <script>
-//import Search from '../components/search.vue';
+
 export default {
   async asyncData({ $content }) {
     const posts = await $content('articles')

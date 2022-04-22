@@ -1,11 +1,49 @@
 <template>
 <div>
-  <nav class="sticky z-50 top-0 relative flex flex-wrap items-center justify-between px-2 py-2 bg-gradient-to-r from-sky-500 to-indigo-500">
+  <nav class="sticky z-50 top-0 relative flex flex-wrap items-center justify-between px-2 py-3 bg-gradient-to-r from-sky-500 to-indigo-500">
     <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
       <div div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
         <a class="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white" href="/home">
           Justini Innovation
         </a>
+
+        <div class=" flex flex-col justify-center lg:hidden" type="button" v-on:click="toggleNavbar()">
+    <div class="relative sm:max-w-xl mx-auto">
+        <nav>
+            <button class="text-white w-10 h-10 relative focus:outline-none" @click="open = !open">
+                <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+                    <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                    <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
+                    <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                </div>
+            </button>
+        </nav>
+    </div>
+</div>
+      </div>
+
+      <div class="hidden lg:block">
+      <div class="lg:flex lg:flex-grow list-none items-center">
+        <ul class="flex flex-col lg:flex-row justify-center ml-auto">
+          <li class="nav-item">
+            <a class="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75" href="/home">
+              <i class=" text-sm leading-lg text-white opacity-75" /><span class="ml-2">Home</span>
+            </a>
+            </li>
+            <li class="nav-item">
+            <a class="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75" href="/blogposts">
+              <i class=" text-sm leading-lg text-white opacity-75" /><span class="ml-2">Posts</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75" href="/about">
+              <i class=" text-sm leading-lg text-white opacity-75" /><span class="ml-2">About</span> 
+            </a>
+          </li>
+        </ul>
+      </div>
+      </div>
+
         <!-- <button class="text-white bg-yellow-300 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" v-on:click="toggleNavbar()">
           <font-awesome-icon :icon="['fas', 'bars']"/> -->
 
@@ -28,48 +66,8 @@
 
 
 
-    <div class="hidden bg-red-200 lg:block">
-      <div class="lg:flex lg:flex-grow list-none items-center">
-        <ul class="flex flex-col lg:flex-row justify-center ml-auto">
-          <li class="nav-item">
-            <a class="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75" href="/home">
-              <i class=" text-sm leading-lg text-white opacity-75" /><span class="ml-2">Home</span>
-            </a>
-            </li>
-            <li class="nav-item">
-            <a class="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75" href="/blogposts">
-              <i class=" text-sm leading-lg text-white opacity-75" /><span class="ml-2">Posts</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="px-3 py-2 flex items-center text-base uppercase font-bold leading-snug text-white hover:opacity-75" href="/about">
-              <i class=" text-sm leading-lg text-white opacity-75" /><span class="ml-2">About</span> 
-            </a>
-          </li>
-        </ul>
-      </div>
-      </div>
 
 
-
-    <div class=" flex flex-col justify-center lg:hidden" type="button" v-on:click="toggleNavbar()">
-    <div class="relative sm:max-w-xl mx-auto">
-        <nav>
-            <button class="text-white w-10 h-10 relative focus:outline-none" @click="open = !open">
-                <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
-                    <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
-                    <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
-                    <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
-                </div>
-            </button>
-        </nav>
-    </div>
-</div>
-
-
-
-
-</div>
 </div>
 
   </nav>

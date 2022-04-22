@@ -1,14 +1,14 @@
 <template>
 <div>
-  <div class="grid bg-red-200 grid-cols-1 lg:grid-cols-2 lg:gap-x-4 place-content-center max-w-screen-lg m-auto px-4 lg:px-0 font-display mt-12 mb-12">
-    <div class="bg-blue-200">
+  <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-4 place-content-center max-w-screen-lg m-auto px-4 lg:px-0 font-display mt-12 mb-12">
+    <div class="">
         <h2 class="text-5xl md:text-5xl text-grey-990 leading-snug tracking-tighter mb-3 font-medium">
             Recent articles
         </h2>
         The latest thoughts, experiments, and essays.
     </div>
 
-           <div class="flex justify-bottom relative p-2 mx-auto text-gray-600 bg-green-200">
+           <div class="flex justify-bottom relative p-2 mx-auto text-gray-600">
         <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
           type="search" name="search" placeholder="Search articles">
         <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
@@ -22,7 +22,7 @@
         </button>
       </div>
 
-    <div class="bg-red-500 flex space-x-2 space-y-2 flex-wrap lg:justify-end lg:mt-0 mt-5 flex text-xs items-end">
+    <div class="flex space-x-2 space-y-2 flex-wrap lg:justify-end lg:mt-0 mt-5 flex text-xs items-end">
 
       <div class="bg-blue-300 hover:bg-blue-400 transition duration-200 py-2 px-3 shadow-sm rounded-sm cursor-pointer" @click="toggle($event)">
           Chicken

@@ -4,4 +4,4 @@ borde fungera på alla skärmstorlekar också (förutom liten bug med mellanstor
 
 ### Inspiration
 
-<img src="images/inspiration.png">
+![alt text](https://github.com/[abbchrjer]/[blog]/blob/[master]/images/inspiration.jpg?raw=true)

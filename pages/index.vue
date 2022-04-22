@@ -1,76 +1,43 @@
 <template>
-  <div
-    id="app"
-    class="flex items-center justify-center bg-gray-100 min-h-screen"
-  >
-    <div class="relative text-lg w-48">
-      <button
-        class="flex items-center justify-between px-3 py-2 bg-white w-full border border-gray-500 rounded-lg"
-        @click="isOptionsExpanded = !isOptionsExpanded"
-        @blur="isOptionsExpanded = false"
-      >
-        <span>{{ selectedOption }}</span>
-        <svg
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          class="h-4 w-4 transform transition-transform duration-200 ease-in-out"
-          :class="isOptionsExpanded ? 'rotate-180' : 'rotate-0'"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-      </button>
-      <transition
-        enter-active-class="transform transition duration-500 ease-custom"
-        enter-class="-translate-y-1/2 scale-y-0 opacity-0"
-        enter-to-class="translate-y-0 scale-y-100 opacity-100"
-        leave-active-class="transform transition duration-300 ease-custom"
-        leave-class="translate-y-0 scale-y-100 opacity-100"
-        leave-to-class="-translate-y-1/2 scale-y-0 opacity-0"
-      >
-        <ul
-          v-show="isOptionsExpanded"
-          class="absolute left-0 right-0 mb-4 bg-white divide-y rounded-lg shadow-lg overflow-hidden"
-        >
-          <li
-            v-for="(option, index) in options"
-            :key="index"
-            class="px-3 py-2 transition-colors duration-300 hover:bg-gray-200"
-            @mousedown.prevent="setOption(option)"
-          >
-            {{ option }}
-          </li>
-        </ul>
-      </transition>
-    </div>
+<div>
+
+ <div class= "w-full h-96 bg-no-repeat bg-cover bg-fixed mb-12" style="background-image: url(/images/food.jpg)">
   </div>
+
+  <div>
+    <!-- <h1 class="text-6xl font-black m-12">Latest posts</h1> -->
+    <ul class="grid flex md:grid-cols-2 md:gap-4 xs:grid-cols-1 lg:grid-cols-3 lg:gap-8 m-8">
+      <PostPreview v-for="post in computedObj" :key="post.slug" :post="post"></PostPreview>
+    </ul>
+  </div>
+
+  <!-- <div class=" flex space-x-3 space-y-3 flex-wrap justify-center text-lg items-end mt-5 font-bold mb-12 mt-12">
+        <div class="flex bg-sky-500 hover:bg-sky-600 transition duration-200 py-5 px-12 shadow-sm rounded-lg cursor-pointer text-white text-bold">View more posts
+        </div>
+      </div> -->
+
+      <a class="flex justify-center text-2xl font-black pt-8 pb-24 cursor-pointer" href="/blogposts">View more posts</a>
+
+</div>
 </template>
 
 <script>
 export default {
-  data() {
+  async asyncData({ $content }) {
+    const posts = await $content('articles')
+      .only(['title', 'image', 'tags', 'slug', 'description', 'updatedAt'])
+      .sortBy('createdAt', 'desc')
+      .fetch()
+      
     return {
-      isOptionsExpanded: false,
-      selectedOption: "drop",
-      options: ["1x", "2x", "3x"]
-    };
-  },
-  methods: {
-    setOption(option) {
-      this.selectedOption = option;
-      this.isOptionsExpanded = false;
+      posts,
+      limit: 5
     }
+  },
+  computed:{
+  computedObj(){
+    return this.limit ? this.posts.slice(0,this.limit) : this.posts
   }
-};
-</script>
-
-<style>
-.ease-custom {
-  transition-timing-function: cubic-bezier(.61,-0.53,.43,1.43);
+},
 }
-</style>
+</script>

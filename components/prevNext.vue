@@ -1,5 +1,5 @@
 <template>
-  <section id="prev-next" class="flex gap-12 py-8 items-center justify-between m-auto max-w-xl lg: max-w-4xl">
+  <section id="prev-next" class="flex m-5 gap-12 py-8 items-center justify-between m-auto max-w-xl lg: max-w-4xl">
     <nuxt-link
       v-if="prev"
       :to="{ name: 'posts-slug', params: { slug: prev.slug } }"

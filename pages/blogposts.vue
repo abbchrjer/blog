@@ -134,28 +134,27 @@ export default {
              let newArr = [];
              
              for (let i = 0; i < array.length; i++){
-              //  let hasElem = false;
-              let hasAllElems = true;
-               for (let j = 0; j < (array[i].tags).length; j++){
-               if ((this.selected).indexOf(array[i].tags[j]) === -1) {
-                 hasAllElems = false;
-                 }
-               }
-               if (hasAllElems == true) newArr.push(array[i]);
+               let hasElem = false;
+              // let hasAllElems = true;
+              //  for (let j = 0; j < (array[i].tags).length; j++){
+              //  if ((this.selected).indexOf(array[i].tags[j]) === -1) {
+              //    hasAllElems = false;
+              //    }
+              //  }
+              //  if (hasAllElems == true) newArr.push(array[i]);
 
 
-    //           for(let j = 0; j < (array[i].tags).length; j++) {
+              for(let j = 0; j < (array[i].tags).length; j++) {
          
-    //     for(let k = 0; k < (this.selected).length; k++) {
+        for(let k = 0; k < (this.selected).length; k++) {
              
-    //         if((array[i].tags)[j] == (this.selected)[k]) {
+            if((array[i].tags)[j] == (this.selected)[k]) {
              
-    //             hasElem = true;
-    //         }
-    //     }
-    // } if (hasElem == true) newArr.push(array[i]);
+                hasElem = true;
+            }
+        }
+    } if (hasElem == true) newArr.push(array[i]);
 
-    //          } 
              
              
              }

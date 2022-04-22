@@ -46,11 +46,11 @@
 
 
 
-<div class="py-16 bg-white">  
+<div class="flex py-16 bg-white">  
   <div class="container m-auto md:px-12 xl:px-6">
       <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
                         <div class="md:5/12 lg:w-5/12 m-5">
-          <nuxt-img :src="post.img" alt="image" loading="lazy" width="" height=""/>
+          <nuxt-img :src="post.img" alt="image" loading="lazy" class="h-full w-full"/>
         </div>
         <div class="md:7/12 lg:w-6/12 m-5">
           <NuxtLink to="/home" href="/home" class="block text-gray-400 mt-8">← To Home</NuxtLink>

@@ -4,4 +4,4 @@ borde fungera på alla skärmstorlekar också (förutom liten bug med mellanstor
 
 ### Inspiration
 
-<img src="inspiration.png">
+<img src="images/inspiration.png">

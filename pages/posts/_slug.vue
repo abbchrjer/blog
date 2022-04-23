@@ -2,7 +2,7 @@
 <div>
   <article class="grid grid-cols-12 pb-24 mt-8">
     <nuxt-img
-      class=" col-start-3 col-span-8 w-full"
+      class="col-start-3 col-span-8 w-full"
       :src="post.image"
       width="768"
       height="509"

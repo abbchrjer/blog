@@ -72,7 +72,7 @@
 
   </nav>
 
-<div class=" absolute z-49">
+<div class="absolute z-49">
           <transition
         enter-active-class="transform transition duration-500 ease-custom"
         enter-class="-translate-y-1/2 scale-y-0 opacity-0"
